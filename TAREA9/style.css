@@ -1,0 +1,54 @@
+body{
+    font-family: 'Karla', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.contenedor{
+    background-color: rgba(226, 225, 225, 0.855);
+    width: 750px;
+    height: 750px;
+
+}
+
+h1{
+    text-align: center;
+}
+
+.fila1{
+    background-color: rgb(209, 186, 231);
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.fila2{
+    background-color: rgb(238, 200, 206);
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+
+}
+
+.fila3{
+     background-color: white;
+     margin: 15px;
+     padding: 15px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+
+}
+
+.credito{
+    text-align: center;
+}
+
+img{
+    height: 200px;
+}
