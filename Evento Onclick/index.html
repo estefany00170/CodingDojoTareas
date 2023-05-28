@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Onclick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Noto+Sans+TC:wght@500&family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <h1 class="Dojonary">Dojonary</h1>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>  
+        <div>
+            <button class="login" id="buttonlogin" onclick="changelogin()">Login</button>
+        </div>
+    </div>
+    <main>
+        <div class="bigContainer">
+        <section class="section-1">
+            <div class="container-1">
+                <div class="box-1">
+                    <div class="col-1">
+                    <h2 class="ninja">ninja</h2>
+                    <h3 class="noun">noun</h3>
+                    <p class="text">Plural: <span class="textmin">ninja</span></p>
+                    <button class="like" onclick="ninjalike()"> 13 Likes </button>
+                    </div>
+                    <div class="col-2">
+                        <p class="textRigth">A practitioner skilled in the<br> 
+                            <span class="blue">Japanese</span> art of <span class="blue"> ninjutsu</span></p>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <div class="col-1">
+                        <h2 class="ninja">ninja</h2>
+                        <h3 class="noun">noun</h3>
+                        <p class="text">Plural: <span class="textmin">ninja</span></p>
+                        <button class="like" onclick="ninjalike()"> 37 Likes </button>
+                    </div>
+                    <div class="col-2">
+                        <p class="textRigth">A <span class="blue">programmer</span> who breaks
+                            <br>down problems with <span class="blue">zen</span>-like
+                        <br>focus</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="section-2">
+            <div class="container-2">
+                <div class="toptext">
+                <h2 class="textMax">Dojonary is<br> defined by YOU</h2>
+                </div>
+                <div class="bottomB">
+                <button class="add" id="buttonadd" onclick="removeadd()">Add Definition</button>
+                </div>
+            </div>
+        </section>
+    </div>    
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
