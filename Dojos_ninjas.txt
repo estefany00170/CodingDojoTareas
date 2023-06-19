@@ -1,0 +1,63 @@
+#Consulta: crea 3 dojos nuevos
+INSERT INTO dojos(nombre)
+VALUES ('Chile'),
+	   ('Venezuela'),
+       ('Argentina');
+       
+#Consulta: elimina los 3 dojos que acabas de crear
+
+DELETE 
+FROM dojos
+WHERE id = 1;
+
+DELETE 
+FROM dojos
+WHERE id = 2;
+
+DELETE 
+FROM dojos
+WHERE id = 3;
+
+#Consulta: crea 3 dojos nuevos
+INSERT INTO dojos(nombre)
+VALUES ('Chile'),
+	   ('Venezuela'),
+       ('Argentina');
+       
+#Consulta: crea 3 ninjas que pertenezcan al primer dojo
+INSERT INTO ninjas(nombre, apellido, edad, id_dojo)
+VALUES ('Ricardo', 'Bueno', 37, 4),
+	   ('Veronica', 'Lugo', 15, 4),
+       ('Lisa', 'Valdes', 18, 4);
+       
+#Consulta: crea 3 ninjas que pertenezcan al segundo dojo
+INSERT INTO ninjas(nombre, apellido, edad, id_dojo)
+VALUES ('Jesus', 'Farias', 17, 5),
+	   ('Miranda', 'Moncada', 25, 5),
+       ('Janeth', 'Moncada', 28, 5);
+
+#Consulta: crea 3 ninjas que pertenezcan al tercer dojo
+INSERT INTO ninjas(nombre, apellido, edad, id_dojo)
+VALUES ('Lautaro', 'Rivas', 25, 6),
+	   ('Mariana', 'Blanck', 19, 6),
+       ('Gustavo', 'Diaz', 20, 6);
+#Consulta: recupera todos los ninjas del primer dojo
+SELECT *
+FROM ninjas
+WHERE id_dojo = 4;
+
+#Consulta: recupera todos los ninjas del último dojo
+SELECT *
+FROM ninjas
+WHERE id_dojo = 6;
+
+#Consulta: recupera el dojo del último ninja
+SELECT n.nombre, d.nombre AS 'Dojo'
+FROM ninjas n JOIN dojos d
+ON n.id_dojo = d.id
+WHERE n.id =9;
+
+
+
+
+
