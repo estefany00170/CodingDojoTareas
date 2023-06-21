@@ -1,0 +1,82 @@
+#Consulta: crea 5 usuarios diferentes: Jane Austen, Emily Dickinson, Fyodor Dostoevsky, William Shakespeare, Lau Tzu
+INSERT INTO usuarios(id, nombre, apellido)
+VALUES              (1,'Jane', 'Austen'),
+					(2,'Emily', 'Dickinson'),
+                    (3,'Fyodor', 'Dostoevsky'),
+                    (4,'William', 'Shakespeare'),
+                    (5,'Lau', 'Tzu');
+                    
+#Consulta: crea 5 libros con los siguientes nombres: C Sharp, Java, Python, PHP, Ruby
+INSERT INTO libros(titulo, num_paginas)
+VALUES            ('C Sharp', 205),
+				  ('Java', 255),
+                  ('Python', 300),
+                  ('PHP', 405),
+                  ('Ruby', 147);
+                  
+#Consulta: cambia el nombre del libro de C Sharp a C#
+UPDATE libros 
+SET titulo = 'C#'
+WHERE id = 1;
+
+#Consulta: cambia el nombre del cuarto usuario a Bill
+UPDATE usuarios
+SET nombre = 'Bill'
+WHERE id = 4;
+
+#Consulta: haz que el primer usuario marque como favorito los 2 primeros libros
+INSERT INTO favoritos(id_usuario, id_libro)
+VALUES				 (1, 1),
+					 (1, 2);
+                     
+#Consulta: haz que el segundo usuario marque como favorito los primeros 3 libros
+INSERT INTO favoritos(id_usuario, id_libro)
+VALUES				 (2, 1),
+					 (2, 2),
+                     (2, 3);
+
+#Consulta: haz que el tercer usuario marque como favorito los 4 primeros libros
+INSERT INTO favoritos(id_usuario, id_libro)
+VALUES				 (3, 1),
+					 (3, 2),
+                     (3, 3),
+                     (3, 4);
+                     
+#Consulta: Haz que el cuarto usuario marque como favorito todos los libros
+INSERT INTO favoritos(id_usuario, id_libro)
+VALUES				 (4, 1),
+					 (4, 2),
+                     (4, 3),
+                     (4, 4),
+                     (4, 5);
+                     
+#Consulta: recupera todos los usuarios que marcaron como favorito el tercer libro
+SELECT nombre, apellido
+FROM usuarios u JOIN favoritos f
+ON u.id = f.id_usuario
+LEFT JOIN libros l
+ON l.id = f.id_libro
+WHERE id_libro = 3;
+
+#Consulta: elimina el primer usuario de los favoritos del tercer libro
+DELETE FROM favoritos
+WHERE id_usuario = 2 AND id_libro = 3;
+
+#Consulta: Haz que el quinto usuario marque como favorito el segundo libro
+INSERT INTO favoritos(id_usuario, id_libro)
+VALUES				 (5, 2);
+
+#Encuentra todos los libros que el tercer usuario marcó como favoritos
+SELECT id_usuario, titulo
+FROM libros l JOIN favoritos f
+ON l.id = f.id_libro
+WHERE id_usuario = 3;
+
+#Consulta: encuentra todos los usuarios que marcaron como favorito el quinto libro
+SELECT nombre, apellido
+FROM usuarios u JOIN favoritos f
+ON u.id = f.id_usuario
+WHERE id_libro = 5;
+
+
+                    
