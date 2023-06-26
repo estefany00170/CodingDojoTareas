@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patio de juegos</title>
+    <style>
+    .container{
+        margin: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
+        clear: both;
+    }
+    .box{
+        border: 1px solid black;
+        height: 20px;
+        width: 20px;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="title">
+        <h1>Welcome!</h1>
+    </div>
+    <div class="container">
+        {{ boxes | safe }}
+    </div>
+    
+</body>
+</html>
