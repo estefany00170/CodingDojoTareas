@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = '/css/index.css') }}"/>
+</head>
+<body>
+    <div class="titles">
+        <h1>Counter</h1>
+        <h2>{{session['counter']}} times!</h2>
+        <form method="GET" action="/increase_2">
+            <button class="clickTwo" type="submit">Click x 2</button>
+        </form>
+    </div>
+    <div class="container">
+        <form method="POST" action="/">
+            <button class="click" type="submit">Click</button>
+        </form>
+        <form method="POST" action="/destroy_session">
+            <button class="reset">Reset</button>
+        </form>
+    </div>
+    <div class="form_increase">
+        <form method="POST" action="/form">
+            <div>
+                <label for="increase">
+                    how much do you want to increase?
+                </label>
+                <input type="text" id="increase" name="increase">
+            </div>
+            <button type="submit">
+                Increase
+            </button>
+        </form >
+        
+    </div>
+</body>
+</html>
