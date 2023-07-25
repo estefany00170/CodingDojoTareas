@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Noto+Sans&family=Noto+Sans+TC:wght@500&family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tiempo Dojo</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="bar-top">
+            <h1 class="title-bar">DojoWeather</h1>
+            <ul class="cities">
+                <li onclick="changeCity(this)">Burbank</li>
+                <li onclick="changeCity(this)">Chicago</li>
+                <li onclick="changeCity(this)">Dallas</li>
+            </ul>
+        </nav>
+        <main class="big-box">
+            <div class="bar-city">
+                <h2>San Jose</h2>
+                <div class="showT">
+                    <h5>show temperature in </h5>
+                    <select onchange="changeMetric(this)">
+                        <option value="celcius">°C</option>
+                        <option value="farenheit">°F</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-days">
+                <div class="days">
+                    <h3 class="day">Today</h3>
+                    <img class="weatherImage" src="./assets/some_rain.png" alt="lluvia">
+                    <div>some rain</div>
+                    <div class="temperature">
+                        <div class="maxTemp">
+                            <span class="max">24</span>º
+                        </div>
+                        <div class="minTemp">
+                            <span class="min">18</span>º
+                        </div>
+                    </div>
+
+                </div>
+                <div class="days">
+                    <h3 class="day">Tomorrow</h3>
+                    <img class="weatherImage" src="./assets/some_sun.png" alt="lluvia">
+                    <div>some sun</div>
+                    <div class="temperature">
+                        <div class="maxTemp">
+                            <span class="max">27</span>º
+                        </div>
+                        <div class="minTemp">
+                            <span class="min">19</span>º
+                        </div>
+                    </div>
+                </div>
+                <div class="days">
+                    <h3 class="day">Friday</h3>
+                    <img class="weatherImage" src="./assets/some_clouds.png" alt="lluvia">
+                    <div>some clouds</div>
+                    <div class="temperature">
+                        <div class="maxTemp">
+                            <span class="max">21</span>º
+                        </div>
+                        <div class="minTemp">
+                            <span class="min">16</span>º
+                        </div>
+                    </div>
+                </div>
+                <div class="days">
+                    <h3 class="day">Saturday</h3>
+                    <img class="weatherImage" src="./assets/some_sun.png" alt="lluvia">
+                    <div>some rain</div>
+                    <div class="temperature">
+                        <div class="maxTemp">
+                            <span class="max">26</span>º
+                        </div>
+                        <div class="minTemp">
+                            <span class="min">21</span>º
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <div class="cookie" >
+        <img src="./assets/cookie.png" alt="cookie">
+        <div class="textCookie">
+            <h3>Stop! Cookie time</h3>
+            <p>We use cookies (sadly not the edible ones) to personalize content 
+                and ads, to provide social media features and to analyse our traffic.<a href="#">Read more...</a>
+            </p>
+
+        </div>
+        <button class="accept" onclick="acceptCookie(this)">I accept</button>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
